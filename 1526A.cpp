@@ -1,3 +1,7 @@
+/* Problem - 1526A -Mean Inequality - Codeforces. You are given an array a of 2*n distinct integers.
+You want to arrange the elements of the array in a circle such that no element is equal to the the arithmetic mean of its 2 neighbours.
+*/
+
 #include<bits/stdc++.h>
 #include<iostream>
 #include<algorithm>
@@ -19,12 +23,15 @@ using namespace std;
 int main(){
 	int test ;cin>>test;
 	while(test--){
-		ll n; cin>>n; vi v(2*n),vc(n),vv(n); int k=0;
+		ll n; cin>>n; 
+		vi v(2*n);//create vector array of 2*n elements
 		rep{ 
 		cin>>v[i];
 	}
 	sort(v.begin(),v.end());
- 
+ //hint: split an array into two halfs:
+//1st array contain first n small elements
+//2nd array contains n+1 to 2*n elements
 	for(int i=0;i<n;i++){
 	cout<<v[i]<<" "<<v[i+n]<<" ";
 }
